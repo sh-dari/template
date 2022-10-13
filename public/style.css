@@ -95,9 +95,8 @@
   }
   
   .footer__links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     padding: 50px 0;
     font-weight: 500;
   }
@@ -106,7 +105,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 50px 0;
+    padding: 30px 0;
   }
   
   .footer__audio {
@@ -118,7 +117,6 @@
   }
   
   .footer__nav {
-    margin: 0 10px;
     line-height: 1.5;
   }
   
@@ -238,10 +236,6 @@
     padding-bottom: 20px;
   }
   
-  .musician {
-    width: calc(100% / 6 - 20px);
-  }
-  
   .musician__img {
     border-radius: 50%;
     width: 100%;
@@ -267,10 +261,15 @@
   }
   
   .tag {
-    padding-right: 10px;
-    color: gray;
+    display: inline;
+    padding-right: 7px;
     position: relative;
+    list-style-type: none;
+  }
+
+  .tag a {
     text-decoration: none;
+    color: gray;
   }
   
   .tag:hover {
@@ -283,7 +282,7 @@
     height: 2px;
     border-radius: 50%;
     position: absolute;
-    right: 5px;
+    right: 3px;
     background-color: grey;
     top: 10px;
   }
@@ -297,9 +296,10 @@
   }
   
   .musicians__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 1em;
   }
   
   .tracks {
@@ -308,15 +308,15 @@
   }
   
   .tracks__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 1em;
   }
   
   .track {
     display: flex;
     align-items: center;
-    width: calc(100% / 3 - 20px);
     cursor: pointer;
   }
   
@@ -580,10 +580,8 @@
   .search-result__other-elem {
     position: absolute;
     top: 5px;
-    /* margin: auto; */
     background-image: url(https://www.last.fm/static/images/icons/arrow_small_right_005399_12.8f025ef116be.png);
     background-repeat: no-repeat;
-    /* background-position: 50% 50%; */
     width: 10px;
     height: 10px;
   }
