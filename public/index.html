@@ -2,36 +2,559 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>last.fm</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <body class="app">
+    <header class="header">
+      <div class="header__icons">
+        <img class="header__iconsDisk" src="imgs/player_default_album.png"/>
+        <div class="header__iconsPlayer">
+          <img src="imgs/rewind.png" width="20" height="17" />
+          <img src="imgs/player.png" width="30" />
+          <img src="imgs/rewind.png" width="20" height="17" class="img-right"/>
+          <img src="imgs/heart.png" width="20" height="17"/>
+        </div>
+      </div>
+      <div class="header__logo">
+        <a href="/">
+          <img src="imgs/logo.png" width="110"/>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <a href="/">
+          <img class="header__navLink" src="imgs/magnifying-glass.png" height="20"/>
+        </a>
+        <a href="/" class="header__navLink link">Live</a>
+        <a href="/" class="header__navLink link">Music</a>
+        <a href="/" class="header__navLink link">Charts</a>
+        <a href="/" class="header__navLink link">Events</a>
+        <a href="/" class="header__navLink link">Features</a>
+        <div class="header__navSignup">
+          <span class="header__loginLink">•</span>
+          <a href="/" class="header__loginLink link">Log In</a>
+          <a href="/" class="header__loginLink groundLink">Sign up</a>
+        </div>
+      </nav>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <main class="content">
+      <div class="container">
+        <div class="musicians">
+          <h1>Music</h1>
+          <div class="subtitle">Hot right now</div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <div class="musicians__wrapper">
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/abe173540712c2332d0c46b3eeb1d1dc.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Kanye West</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">hip hop</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/1251b09532f0f311e2fcdd25895e9d19.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">BLACKPINK</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">k-pop</a></li>
+                <li class="tag"><a href="/">kpop</a></li>
+                <li class="tag"><a href="/">pop</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/d2924eb048d0a33ee4b4e70a4567d044.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Playboi Carti</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">trap</a></li>
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">cloud rap</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/1555adf0c9a4d1d9e67db159109758ea.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">The Weeknd</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">rnb</a></li>
+                <li class="tag"><a href="/">electronic</a></li>
+                <li class="tag"><a href="/">canadian</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/474e6db5ec3c4e010a3700c51419182b.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Bladee</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">cloud rap</a></li>
+                <li class="tag"><a href="/">trap</a></li>
+                <li class="tag"><a href="/">hip hop</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/1d4ccfe034d2f7b880146f5523f3987d.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Drake</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">rnb</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/9557d2bae814b75c8aa7fb8eaa8fa1f0.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Tyler, the Creator</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">ofwgkta</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/fa53efb99b075d4f4d59bb8969500b5a.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Kendrick Lamar</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">hip hop</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/59ba955b71808161cc0de7c0b5e9a4d4.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Lana Del Rey</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">indie</a></li>
+                <li class="tag"><a href="/">female vocalists</a></li>
+                <li class="tag"><a href="/">pop</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/20d76d2f6695f606973b0b8db5106979.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Steve Lacy</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">free jazz</a></li>
+                <li class="tag"><a href="/">jazz</a></li>
+                <li class="tag"><a href="/">saxophone</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/b4f583ebea903d1a5891cb2e55e098be.jpg"></img>
+              </a>
+              <a href="/" class="musician__name">Juice WRLD</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">hip-hop</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">emo rap</a></li>
+              </ul>
+            </div>
+            <div class="musician">
+              <a href="">
+                <img class="musician__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/292d59e9062fda1a97d108bd6721f594.gif"></img>
+              </a>
+              <a href="/" class="musician__name">Yeat</a>
+              <ul class="tags">
+                <li class="tag"><a href="/">trap</a></li>
+                <li class="tag"><a href="/">rap</a></li>
+                <li class="tag"><a href="/">twizzy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tracks">
+          <div class="subtitle">Popular tracks</div>
+          <div class="tracks__wrapper">
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/8b40692a1133af4047cebebc2e67280b.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Butter</div>
+                <div class="track__group">BTS</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">hip-hop</a></li>
+                  <li class="tag"><a href="/">rap</a></li>
+                  <li class="tag"><a href="/">hip hop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/b11feab3d5951f275dc5258774a3a0ea.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Unholy (feat. Kim Petras)</div>
+                <div class="track__group">Sam Smith</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">soul</a></li>
+                  <li class="tag"><a href="/">pop</a></li>
+                  <li class="tag"><a href="/">british</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/4128a6eb29f94943c9d206c08e625904.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">CASE 143</div>
+                <div class="track__group">Stray Kids</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">k-pop</a></li>
+                  <li class="tag"><a href="/">korean</a></li>
+                  <li class="tag"><a href="/">kpop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/7c79ecab44a7307f7d58e2a44952f1f3.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Rush Hour (Feat. j-hope of BTS)</div>
+                <div class="track__group">Crush</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">k-pop</a></li>
+                  <li class="tag"><a href="/">funk</a></li>
+                  <li class="tag"><a href="/">bts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/e16905d22e5913535a8c6acadc781659.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Left and Right (feat. Jung Kook of BTS)</div>
+                <div class="track__group">Charlie Puth</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">jungkook</a></li>
+                  <li class="tag"><a href="/">2022</a></li>
+                  <li class="tag"><a href="/">pop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/12dcf1122cccf14bd8d943480d04cd58.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Bad Habit</div>
+                <div class="track__group">Steve Lacy</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">indie</a></li>
+                  <li class="tag"><a href="/">sexual</a></li>
+                  <li class="tag"><a href="/">bedroom pop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/b1da75b2bb4e24371262130c628fc00e.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Shut Down</div>
+                <div class="track__group">BLACKPINK</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">k-pop</a></li>
+                  <li class="tag"><a href="/">pop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/8609e1c7f8a4cbce4204e3572a0c99a8.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">With You</div>
+                <div class="track__group">Jimin</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">jimin</a></li>
+                  <li class="tag"><a href="/">ost</a></li>
+                  <li class="tag"><a href="/">bts pop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/4128a6eb29f94943c9d206c08e625904.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">SEXY NUKIM (feat. RM of BTS)</div>
+                <div class="track__group">Balming Tiger</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">korean hip-hop</a></li>
+                  <li class="tag"><a href="/">rm</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/70ff23ed846e3e4a14717863e71ba8dc.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">MORE</div>
+                <div class="track__group">j-hope</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">hip-hop</a></li>
+                  <li class="tag"><a href="/">rap</a></li>
+                  <li class="tag"><a href="/">rock</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/8070d12fe5abd91cc99bb107d6b8ae4f.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Bad Decisions (with BTS & Snoop Dogg)</div>
+                <div class="track__group">Benny Blanco</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">bts</a></li>
+                  <li class="tag"><a href="/">korean</a></li>
+                  <li class="tag"><a href="/">snoop dogg</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/d75ce28e99387be92d371d51528d596f.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Romantic Homicide</div>
+                <div class="track__group">d4vd</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">depresivo</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/8b40692a1133af4047cebebc2e67280b.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Butter</div>
+                <div class="track__group">BTS</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">hip-hop</a></li>
+                  <li class="tag"><a href="/">rap</a></li>
+                  <li class="tag"><a href="/">hip hop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/b11feab3d5951f275dc5258774a3a0ea.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Unholy (feat. Kim Petras)</div>
+                <div class="track__group">Sam Smith</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">soul</a></li>
+                  <li class="tag"><a href="/">pop</a></li>
+                  <li class="tag"><a href="/">british</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/4128a6eb29f94943c9d206c08e625904.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">CASE 143</div>
+                <div class="track__group">Stray Kids</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">k-pop</a></li>
+                  <li class="tag"><a href="/">korean</a></li>
+                  <li class="tag"><a href="/">kpop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/7c79ecab44a7307f7d58e2a44952f1f3.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Rush Hour (Feat. j-hope of BTS)</div>
+                <div class="track__group">Crush</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">k-pop</a></li>
+                  <li class="tag"><a href="/">funk</a></li>
+                  <li class="tag"><a href="/">bts</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/e16905d22e5913535a8c6acadc781659.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Left and Right (feat. Jung Kook of BTS)</div>
+                <div class="track__group">Charlie Puth</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">jungkook</a></li>
+                  <li class="tag"><a href="/">2022</a></li>
+                  <li class="tag"><a href="/">pop</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="track">
+              <a class="track__link" href="/">
+                <img class="track__img" src="https://lastfm.freetls.fastly.net/i/u/300x300/12dcf1122cccf14bd8d943480d04cd58.jpg">
+                <span class="track__hover-elem"></span>
+              </a>
+              <div>
+                <div class="track__title">Bad Habit</div>
+                <div class="track__group">Steve Lacy</div>
+                <ul class="tags">
+                  <li class="tag"><a href="/">indie</a></li>
+                  <li class="tag"><a href="/">sexual</a></li>
+                  <li class="tag"><a href="/">bedroom pop</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__links">
+          <section class="footer__nav">
+            <h2>Company</h2>
+            <ul>
+              <li><a href="/" class="footer__link link">About Last.fm</a></li>
+              <li><a href="/" class="footer__link link">Contact Us</a></li>
+              <li><a href="/" class="footer__link link">Jobs</a></li>
+            </ul>
+          </section>
+          <section class="footer__nav">
+            <h2>Help</h2>
+            <ul>
+              <li><a href="/" class="footer__link link">Track My Music</a></li>
+              <li><a href="/" class="footer__link link">Community Support</a></li>
+              <li><a href="/" class="footer__link link">Community Guidelines</a></li>
+              <li><a href="/" class="footer__link link">Help</a></li>
+            </ul>
+          </section>
+          <section class="footer__nav">
+            <h2>Goodies</h2>
+            <ul>
+              <li><a href="/" class="footer__link link">Download Scrobbler</a></li>
+              <li><a href="/" class="footer__link link">Developer API</a></li>
+              <li><a href="/" class="footer__link link">Free Music Downloads</a></li>
+              <li><a href="/" class="footer__link link">Merchandise</a></li>
+            </ul>
+          </section>
+          <section class="footer__nav">
+            <h2>Account</h2>
+            <ul>
+              <li><a href="/" class="footer__link link">Sign Up</a></li>
+              <li><a href="/" class="footer__link link">Log In</a></li>
+              <li><a href="/" class="footer__link link">Subscribe</a></li>
+            </ul>
+          </section>
+          <section class="footer__nav">
+            <h2>Follow us</h2>
+            <ul>
+              <li><a href="/" class="footer__link link">Facebook</a></li>
+              <li><a href="/" class="footer__link link">Twitter</a></li>
+              <li><a href="/" class="footer__link link">Instagram</a></li>
+              <li><a href="/" class="footer__link link">YouTube</a></li>
+            </ul>
+          </section>
+        </div>
+        <hr>
+        <div class="footer__another">
+          <div class="footer__info">
+            <div class="footer__language">
+              <ul>
+                <li><a href="/" class="footer__link link">English</a></li>
+                <li><a href="/" class="footer__link passive link">Deutsch</a></li>
+                <li><a href="/" class="footer__link passive link">Español</a></li>
+                <li><a href="/" class="footer__link passive link">Français</a></li>
+                <li><a href="/" class="footer__link passive link">Italiano</a></li>
+                <li><a href="/" class="footer__link passive link">日本語</a></li>
+                <li><a href="/" class="footer__link passive link">Polski</a></li>
+                <li><a href="/" class="footer__link passive link">Português</a></li>
+                <li><a href="/" class="footer__link passive link">Русский</a></li>
+                <li><a href="/" class="footer__link passive link">Svenska</a></li>
+                <li><a href="/" class="footer__link passive link">Türkçe</a></li>
+                <li><a href="/" class="footer__link passive link">简体中文</a></li>
+              </ul>
+            </div>
+            <div class="footer__timezon">
+              <p>Time zone: Europe/Moscow</p>
+            </div>
+            <div class="footer__about">
+              <p>CBS Interactive © 2022 Last.fm Ltd. All rights reserved</p>
+              <ul>
+                <li class="circle"><a href="/" class="footer__link passive link">Terms of Use</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Privacy Policy</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Legal Policies</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Cookies Policy</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Cookie Information</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Jobs at ViacomCBS</a></li>
+                <li class="circle"><a href="/" class="footer__link passive link">Last.fm Music</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__audio">
+            <span>Audioscrobbler</span>
+            <img src="imgs/footer_logo.png" width="37" alt=""/>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div> -->
   </body>
 </html>

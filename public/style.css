@@ -1,0 +1,704 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .app {
+    font-family: 'Barlow', sans-serif;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    height: 100vh;
+  }
+  
+  .header,
+  .footer {
+    background-color: #000;
+    font-size: 14px;
+    color: #D3D3D3;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+  }
+  
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (min-width: 1240px) {
+    .header__logo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  .header__navLink, .header__loginLink {
+    flex: 1 1 auto;
+    padding-right: 20px;
+  }
+  
+  .header__icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__iconsPlayer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .header__iconsDisk {
+    padding-right: 70px;
+  }
+  
+  .link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: #fff;
+  }
+  
+  .groundLink {
+    text-align: center;
+    margin: 10px 20px 10px 0;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #D3D3D3;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .groundLink:hover {
+    background-color: #e4e4e4;
+  }
+  
+  .footer {
+    background-color: #111;
+  }
+  
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 50px 0;
+    font-weight: 500;
+  }
+  
+  .footer__another {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 30px 0;
+  }
+  
+  .footer__audio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+    line-height: 2;
+  }
+  
+  .footer__nav {
+    line-height: 1.5;
+  }
+  
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #666;
+    line-height: 2;
+  }
+  
+  .footer__about {
+    display: flex;
+    font-size: 12px;
+    gap: 10px;
+  }
+  
+  .footer__about ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .footer__about li {
+    padding-left: 0;
+    list-style-type: none;
+    position: relative;
+  }
+
+  .footer__about li::before {
+    content: '';
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    background-color: grey;
+    top: 12px;
+  }
+  
+  .footer__language ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #666;
+  }
+  
+  hr {
+    border: none;
+    background-color: #222;
+    color: #222;
+    height: 1px;
+  }
+  
+  .footer__links li, .footer__language li {
+    color: #fff;
+    font-weight: 400;
+    list-style-type: none;
+  }
+  
+  .footer__link:hover {
+    text-decoration: underline;
+  }
+  
+  .passive, .passive:hover {
+    color: #666;
+  }
+  
+  .content {
+    background-color: #fff;
+  }
+  
+  .img-right {
+    transform: rotate(180deg);
+  }
+  
+  .container {
+    max-width: 1160px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: red;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+  }
+  
+  .musicians {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .musician__img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .musician__name {
+    font-weight: 700;
+    line-height: 21px;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .musician__name:hover {
+    text-decoration: underline;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    display: inline;
+    padding-right: 7px;
+    position: relative;
+    list-style-type: none;
+  }
+
+  .tag a {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  .tag:hover {
+    text-decoration: underline;
+  }
+  
+  .tag:after {
+    content: '';
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    position: absolute;
+    right: 3px;
+    background-color: grey;
+    top: 10px;
+  }
+  
+  .tag:last-child {
+    padding-right: 0;
+  }
+  
+  .tag:last-child:after {
+    display: none;
+  }
+  
+  .musicians__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 1em;
+  }
+  
+  .tracks {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  
+  .tracks__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 1em;
+  }
+  
+  .track {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .track:hover .track__hover-elem{
+    opacity: 1;
+  }
+  
+  .track__img {
+    max-width: 70px;
+    flex-shrink: 0;
+  }
+  
+  .track__title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .track__group {
+    margin-bottom: 5px;
+  }
+  
+  .track__link {
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .track__hover-elem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(https://www.last.fm/static/images/icons/play_dark_16.e469e7d1482a.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(228, 228, 228, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  
+  
+  .search-result__result {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+  }
+  
+  .tab {
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .tab_active {
+    font-weight: 700;
+  }
+  
+  .tab_active:before, .tab:hover:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    background-color: #8a0000;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .search-result__top {
+    border-bottom: 1px solid rgb(211, 211, 211);
+  }
+  
+  .input {
+    margin-top: 20px;
+    margin-right: 10px;
+    position: relative;
+  }
+
+  .input:after {
+    border-right: 1px solid #ccc;
+    content: "";
+    height: 24px;
+    margin-top: -12px;
+    position: absolute;
+    right: 42px;
+    top: 50%;
+}
+  
+  .input__field {
+    display: block;
+    padding-right: 80px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    color: #222;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 1.71428571;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 100%;
+    outline: none
+  }
+  
+  .input__field:hover {
+    border-color: #e3e3e3;
+    box-shadow: 0 3px 9px 0 #eee;
+  }
+  
+  .input__field:focus {
+    border-color: #e3e3e3;
+    box-shadow: 0 3px 9px 0 #eee;
+  }
+  
+  .input__close {
+    background-image: url(https://www.last.fm/static/images/icons/clear_field_16.4768b21c62e1.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 50px;
+    top: 12px;
+    cursor: pointer;
+  }
+  
+  .input__search {
+    background-image: url(https://www.last.fm/static/images/icons/search_232323_16.fd4564f92909.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+  }
+  
+  .search-result__wrapper {
+    display: flex;
+  }
+  
+  .search-result__left {
+    max-width: 800px;
+    border-right: 1px solid rgb(211, 211, 211);
+    flex-shrink: 0;
+    padding-bottom: 70px;
+  }
+  
+  .search-result__right {
+    background-color: rgb(250, 250, 250);
+    font-size: 12px;
+    width: 100%;
+    height: inherit;
+    padding-top: 40px;
+    padding-left: 70px;
+    color: rgb(133, 133, 133);
+  }
+
+  .search-result__right-link {
+    color: rgb(133, 133, 133);
+  }
+  
+  .tiles {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .tiles__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .tiles__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tile {
+    cursor: pointer;
+    background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 192px;
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+    position: relative;
+  }
+
+  .tile-album {
+    cursor: pointer;
+    background-image: url(https://lastfm.freetls.fastly.net/i/u/300x300/c6f59c1e5e7240a4c0d427abd71f3dbb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 192px;
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+    position: relative;
+  }
+  
+  .tile:before, .tile-album::before {
+    background-image: linear-gradient(180deg,transparent 0,rgba(0,0,0,.35) 70%,rgba(0,0,0,.7));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .tile__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    z-index: 1;
+  }
+  
+  .tile__subtitle {
+    font-size: 12px;
+    color: white;
+    z-index: 1;
+  }
+  
+  .search-result__other {
+    display: inline-block;
+    color: #014985;
+    text-decoration: none;
+    margin-left: 80%;
+    position: relative;
+  }
+
+  .search-result__other-elem {
+    position: absolute;
+    top: 5px;
+    background-image: url(https://www.last.fm/static/images/icons/arrow_small_right_005399_12.8f025ef116be.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+  }
+
+  .compositions {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .charlist-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .chartlist-play {
+    position: relative;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    width: 32px;
+  }
+  
+  .charlist-play-button {
+    background-color: hsla(0,0%,100%,.85);
+    background-image: url(https://www.last.fm/static/images/icons/play_dark_16.e469e7d1482a.png);
+    background-position: 0 0;
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 7%);
+    content: "";
+    height: 32px;
+    left: 0;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    right: auto;
+    top: 0;
+    top: 50%;
+    transition: background-color .1s;
+    width: 32px;
+  }
+  
+  .chartlist-loved {
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .chartlist-image {
+    flex-shrink: 0;
+  }
+  
+  .chartlist-image img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .charlist-love-button {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .chartlist-love-button:before {
+    background-image: url(https://www.last.fm/static/images/icons/love_animation_tracklist_24.3c884b0287d4.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    height: 24px;
+    left: 0;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    position: absolute;
+    right: auto;
+    top: 0;
+    top: 50%;
+    width: 24px;
+  }
+  
+  .chartlist-name {
+    width: 60%;
+  }
+  
+  .chartlist-artist {
+    width: 40%;
+  }
+  
+  .compositions td {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
+  
+  tbody, table {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .charlist-row {
+    border-bottom: 1px solid rgb(192, 192, 192);
+    transition: 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .charlist-row:hover {
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .charlist-row:hover .chartlist-more {
+    opacity: 1;
+  }
+
+  .charlist-row:hover .chartlist-buylinks {
+    opacity: 1;
+  }
+
+  .chartlist-more, .chartlist-buylinks {
+    opacity: 0;
+  }
