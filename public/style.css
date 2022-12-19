@@ -436,7 +436,8 @@
     padding: 6px 12px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     width: 100%;
-    outline: none
+    outline: none;
+    min-width: 789px;
   }
   
   .input__field:hover {
@@ -701,4 +702,8 @@
 
   .chartlist-more, .chartlist-buylinks {
     opacity: 0;
+  }
+
+  .hidden {
+    display: none;
   }
