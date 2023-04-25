@@ -13,3 +13,6 @@
 - Flex
 - JavaScript
 - React
+
+* [Ссылка на сайт](https://sh-dari.github.io/template/)
+* [Last.fm](https://www.last.fm/ru/home)
